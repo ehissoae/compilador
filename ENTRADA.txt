@@ -1,0 +1,44 @@
+#comment
+float umFloatAe = 1.0001;
+float outroFloatAe = 221312.123213;
+char c;
+char buffer[100];
+int bufferIndex = 0;
+AUTOMATA automata = {S1};
+# comment legal
+
+int getNextCharFlag = 1;
+do {
+  if(getNextCharFlag){
+    c = fgetc(file);
+  }
+  getNextCharFlag = 1; # comentario na mesma linha
+
+
+  STATE currentState = automata.state;
+  STATE nextState = getNextState(automata, c);
+  if(nextState != S1){
+    buffer[bufferIndex] = c;
+    bufferIndex = bufferIndex + 1;
+  } else {
+    if(bufferIndex > 0){
+      TOKENTYPE tokenType = getTokenType(currentState);
+
+      if(tokenType != TTIGNORE){
+        getNextCharFlag = 0;
+
+        char* tokenString = (char*)malloc(sizeof(char) * (bufferIndex + 1));
+        for (int i = 0; i < bufferIndex; ++i) {
+          tokenString[i] = buffer[i];
+        }
+        tokenString[bufferIndex] = 0;
+
+        TOKEN newToken = {tokenString, tokenType};
+      }
+
+      bufferIndex = 0;
+    }
+  }
+
+  automata.state = nextState;
+}

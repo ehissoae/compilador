@@ -1,0 +1,56 @@
+letra = a + b + ... + z + A + B + ... + Z
+<letra> = [a-zA-Z]
+digito = 0 + 1 + 2 + 3 ... + 9
+<digito> = [0-9]
+
+
+<letra> ::= a | b | ... | z | A | B | ... | Z
+<digito> ::= 0 | 1 | 2 | 3 ... | 9
+
+tipos de atomo
+	<numero_int> ::= <digito> | <digito><numero_int>
+	<numero_float> ::= <numero_int>.<numero_int>
+	<identificador> ::= <letra> | <letra><identificador>
+
+	- palavras reservadas
+		<tipo> ::= int | float | bool
+		<bool_const> ::= True | False | true | false
+		<return> ::= return
+		
+		<if> ::= if
+		<else> ::= else
+		<while> ::= while
+
+	- simbolos especiais
+	
+		<(> ::= (
+		<)> ::= )
+		<;> ::= ;
+		<{> ::= {
+		<}> ::= }
+		<[> ::= [
+		<]> ::= ]
+
+		comentarios
+		<#> ::= #
+		<inline_comment> ::= #<texto_sem_enter>\n
+		<##> ::= ##<texto_com_enter>##
+
+	- operadores
+		<=> ::= =
+
+		<+> ::= +
+		<-> ::= -
+		<*> ::= *
+		</> ::= /
+		
+		<>> ::= >
+		<<> ::= <
+		<>=> ::= >=
+		<<=> ::= <=
+		<==> ::= ==
+		<!=> ::= !=
+
+		<not> ::= not
+		<and> ::= and
+		<or> ::= or

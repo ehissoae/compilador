@@ -1,0 +1,18 @@
+variavel = "identificador" ["[" "numero_int" "]"] ["[" "numero_int" "]"] .
+lista_variaveis = variavel {"," variavel} .
+
+variavel_ou_string = variavel | "string" .
+lista_variaveis_ou_string = variavel_ou_string {"," variavel_ou_string} .
+
+tipo = "int" | "float" | "bool" .
+
+comando = ( variavel "=" expressao | "if" "(" expressao ")" "{"comandos"}" | "while" "(" expressao ")" "{"comandos"}" | "scan" "(" lista_variaveis ")" | "print" "(" lista_variaveis_ou_string ")" | tipo "identificador" ["(" { tipo "identificador" } ")" "{" comandos "}"] | "return" expressao ) ";" .
+
+comandos = comando {comando} .
+
+oper = "*" | "/" | "+" | "-" | "and" | "or" | "<" | ">" | "<=" | ">=" | "==" | "!=" .
+constante = "numero_int" | "numero_float" | "true" | "false" .
+
+fator = [("-"|"not")] ( constante | "identificador" ("(" lista_variaveis ")" | ["[" "numero_int" "]"] ["[" "numero_int" "]"]) | "(" expressao ")" ) .
+
+expressao = fator { oper fator } .

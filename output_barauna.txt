@@ -1,0 +1,124 @@
+Automata - variavel
+initial: 0
+final: 1, 4, 7
+(0, "identificador") -> 1
+(1, "[") -> 2
+(2, "numero_int") -> 3
+(3, "]") -> 4
+(4, "[") -> 5
+(5, "numero_int") -> 6
+(6, "]") -> 7
+
+Automata - lista_variaveis
+initial: 0
+final: 1
+(0, variavel) -> 1
+(1, ",") -> 0
+
+Automata - variavel_ou_string
+initial: 0
+final: 1
+(0, variavel) -> 1
+(0, "string") -> 1
+
+Automata - lista_variaveis_ou_string
+initial: 0
+final: 1
+(0, variavel_ou_string) -> 1
+(1, ",") -> 0
+
+Automata - tipo
+initial: 0
+final: 1
+(0, "int") -> 1
+(0, "float") -> 1
+(0, "bool") -> 1
+
+Automata - comando
+initial: 0
+final: 8
+(0, variavel) -> 1
+(0, "if") -> 2
+(0, "while") -> 2
+(0, "scan") -> 3
+(0, "print") -> 4
+(0, tipo) -> 5
+(0, "return") -> 6
+(1, "=") -> 6
+(2, "(") -> 9
+(3, "(") -> 19
+(4, "(") -> 17
+(5, "identificador") -> 10
+(6, expressao) -> 7
+(7, ";") -> 8
+(9, expressao) -> 11
+(10, "(") -> 12
+(10, ";") -> 8
+(11, ")") -> 13
+(12, ")") -> 13
+(12, tipo) -> 14
+(13, "{") -> 15
+(14, "identificador") -> 12
+(15, comandos) -> 16
+(16, "}") -> 7
+(17, lista_variaveis_ou_string) -> 18
+(18, ")") -> 7
+(19, lista_variaveis) -> 18
+
+Automata - comandos
+initial: 0
+final: 1
+(0, comando) -> 1
+(1, comando) -> 1
+
+Automata - oper
+initial: 0
+final: 1
+(0, "*") -> 1
+(0, "/") -> 1
+(0, "+") -> 1
+(0, "-") -> 1
+(0, "and") -> 1
+(0, "or") -> 1
+(0, "<") -> 1
+(0, ">") -> 1
+(0, "<=") -> 1
+(0, ">=") -> 1
+(0, "==") -> 1
+(0, "!=") -> 1
+
+Automata - constante
+initial: 0
+final: 1
+(0, "numero_int") -> 1
+(0, "numero_float") -> 1
+(0, "true") -> 1
+(0, "false") -> 1
+
+Automata - fator
+initial: 0
+final: 2, 3, 9
+(0, "-") -> 1
+(0, "not") -> 1
+(0, constante) -> 2
+(0, "identificador") -> 3
+(0, "(") -> 4
+(1, constante) -> 2
+(1, "identificador") -> 3
+(1, "(") -> 4
+(3, "(") -> 6
+(3, "[") -> 7
+(4, expressao) -> 5
+(5, ")") -> 2
+(6, lista_variaveis) -> 5
+(7, "numero_int") -> 8
+(8, "]") -> 9
+(9, "[") -> 10
+(10, "numero_int") -> 11
+(11, "]") -> 2
+
+Automata - expressao
+initial: 0
+final: 1
+(0, fator) -> 1
+(1, oper) -> 0

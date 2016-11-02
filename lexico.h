@@ -3,5 +3,6 @@
 
 #include "automata.h"
 
-TOKEN get_next_token(FILE* file, AUTOMATA *automata);
+void get_next_token(FILE* file, AUTOMATA* automata, TOKEN* token);
+
 #endif

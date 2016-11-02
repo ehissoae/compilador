@@ -1,0 +1,56 @@
+letra = “a” | “b” | ... | “z” | “A” | “B” | ... | “Z” .
+digito = “0” | “1” | “2” | “3” | ... | “9” .
+
+numero_int = digito {digito} .
+numero_int_sinal = [“-”] numero_int .
+numero_float = numero_int “.” numero_int .
+numero_float_sinal = [“-”] numero_float .
+
+identificador = letra {letra} .
+acesso_array = identificador “[” numero_int “]” .
+acesso_matriz = acesso_array “[” numero_int “]” .
+
+variavel = identificador | acesso_array | acesso_matriz .
+lista_variaveis = variavel {“,” variavel} .
+
+variavel_ou_string = variavel | string .
+lista_variaveis_ou_string = variavel_ou_string {“,” variavel_ou_string} .
+
+char = letra | “ ” | numero_int .
+chars = char {char} .
+string =  “"” chars “"” .
+
+tipo = “int” | “float” | “bool” .
+declaracao = tipo chars “;” .
+
+comando = atribuicao | condicional | iteracao | entrada | saida | declaracao | declaracao_func .
+comandos = comando  {comando} .
+
+atribuicao = variavel “=” expressao “;” .
+condicional = “if” “(“ expressao_bool “)” {comandos} “;” .
+iteracao = “while” “(“ expressao_bool “)” {comandos} “;” .
+entrada = “scan” “(“ lista_variaveis “)” “;” .
+saida = “print” “(“ lista_variaveis_ou_string “)” “;” .
+
+oper_aritA = “+” | “-” .
+oper_aritB = “*” | “/” .
+
+constante_arit = numero_int_sinal | numero_float_sinal .
+fator_arit = [“-”] ( variavel | constante_arit | chamada_func | “(“ expressao_arit “)” ) .
+
+expressao_arit = termo_arit { oper_aritA termo_arit } .
+termo_arit = fator_arit { oper_aritB fator_arit } .
+
+constante_bool = “true” | “false” .
+fator_bool = [“not”] ( variavel | constante_bool | chamada_func | condicao | “(“ expressao_bool “)” ) .
+
+expressao_bool = termo_bool { “and” termo_bool } .
+termo_bool = fator_bool { “or” fator_bool } .
+
+comparador = “<” | “>” | “<=” | “>=” | “==” | “!=” .
+condicao = expressao_arit comparador expressao_arit .
+
+expressao = expressao_bool | expressao_arit .
+
+chamada_func = chars “(“ lista_variaveis “)” .
+declaracao_func = tipo chars “(“ { tipo chars } “)” “{“ [ comandos ] “}” “;” .

@@ -5,7 +5,7 @@
 #include "automata.h"
 
 const int TRANSITION_TABLE[NUM_STATES][NUM_INPUT_TYPES] =
-{       
+{
           /* 0   1   2   3   4   5   6   7   8   9*/
   /* S1 */ {S6, S2, S3, S6, S8, S5, S5, S7, S1, S1},
   /* S2 */ {S1, S2, S1, S1, S1, S1, S1, S1, S1, S1},

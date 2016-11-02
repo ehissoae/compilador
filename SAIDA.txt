@@ -1,0 +1,263 @@
+
+Recebendo token: 'int' (Identificador)
+TODO - submachine call M6 -> M5! Push(6, 1)
+TODO - submachine call M5 -> M4! Push(5, 5)
+TODO - consome token 'int'!
+
+Recebendo token: 'calculaFatorial' (Identificador)
+TODO - retorno! M4 -> M5 (S5)
+TODO - consome token 'calculaFatorial'!
+
+Recebendo token: '(' (Simbolo)
+TODO - consome token '('!
+
+Recebendo token: 'int' (Identificador)
+TODO - submachine call M5 -> M4! Push(5, 14)
+TODO - consome token 'int'!
+
+Recebendo token: 'numero' (Identificador)
+TODO - retorno! M4 -> M5 (S14)
+TODO - consome token 'numero'!
+
+Recebendo token: ')' (Simbolo)
+TODO - consome token ')'!
+
+Recebendo token: '{' (Simbolo)
+TODO - consome token '{'!
+
+Recebendo token: 'int' (Identificador)
+TODO - submachine call M5 -> M6! Push(5, 16)
+TODO - submachine call M6 -> M5! Push(6, 1)
+TODO - submachine call M5 -> M4! Push(5, 5)
+TODO - consome token 'int'!
+
+Recebendo token: 'resultado' (Identificador)
+TODO - retorno! M4 -> M5 (S5)
+TODO - consome token 'resultado'!
+
+Recebendo token: ';' (Simbolo)
+TODO - consome token ';'!
+
+Recebendo token: 'resultado' (Identificador)
+TODO - retorno! M5 -> M6 (S1)
+TODO - submachine call M6 -> M5! Push(6, 1)
+TODO - submachine call M5 -> M0! Push(5, 1)
+TODO - consome token 'resultado'!
+
+Recebendo token: '=' (Simbolo)
+TODO - retorno! M0 -> M5 (S1)
+TODO - consome token '='!
+
+Recebendo token: 'numero' (Identificador)
+TODO - submachine call M5 -> M10! Push(5, 7)
+TODO - submachine call M10 -> M9! Push(10, 1)
+TODO - consome token 'numero'!
+
+Recebendo token: ';' (Simbolo)
+TODO - retorno! M9 -> M10 (S1)
+TODO - retorno! M10 -> M5 (S7)
+TODO - consome token ';'!
+
+Recebendo token: 'while' (Identificador)
+TODO - retorno! M5 -> M6 (S1)
+TODO - submachine call M6 -> M5! Push(6, 1)
+TODO - consome token 'while'!
+
+Recebendo token: '(' (Simbolo)
+TODO - consome token '('!
+
+Recebendo token: 'numero' (Identificador)
+TODO - submachine call M5 -> M10! Push(5, 11)
+TODO - submachine call M10 -> M9! Push(10, 1)
+TODO - consome token 'numero'!
+
+Recebendo token: '>' (Simbolo)
+TODO - retorno! M9 -> M10 (S1)
+TODO - submachine call M10 -> M7! Push(10, 0)
+TODO - consome token '>'!
+
+Recebendo token: '1' (Inteiro)
+TODO - retorno! M7 -> M10 (S0)
+TODO - submachine call M10 -> M9! Push(10, 1)
+TODO - consome token '1'!
+
+Recebendo token: ')' (Simbolo)
+TODO - retorno! M9 -> M10 (S1)
+TODO - retorno! M10 -> M5 (S11)
+TODO - consome token ')'!
+
+Recebendo token: '{' (Simbolo)
+TODO - consome token '{'!
+
+Recebendo token: 'numero' (Identificador)
+TODO - submachine call M5 -> M6! Push(5, 16)
+TODO - submachine call M6 -> M5! Push(6, 1)
+TODO - submachine call M5 -> M0! Push(5, 1)
+TODO - consome token 'numero'!
+
+Recebendo token: '=' (Simbolo)
+TODO - retorno! M0 -> M5 (S1)
+TODO - consome token '='!
+
+Recebendo token: 'numero' (Identificador)
+TODO - submachine call M5 -> M10! Push(5, 7)
+TODO - submachine call M10 -> M9! Push(10, 1)
+TODO - consome token 'numero'!
+
+Recebendo token: '-' (Simbolo)
+TODO - retorno! M9 -> M10 (S1)
+TODO - submachine call M10 -> M7! Push(10, 0)
+TODO - consome token '-'!
+
+Recebendo token: '1' (Inteiro)
+TODO - retorno! M7 -> M10 (S0)
+TODO - submachine call M10 -> M9! Push(10, 1)
+TODO - consome token '1'!
+
+Recebendo token: ';' (Simbolo)
+TODO - retorno! M9 -> M10 (S1)
+TODO - retorno! M10 -> M5 (S7)
+TODO - consome token ';'!
+
+Recebendo token: 'resultado' (Identificador)
+TODO - retorno! M5 -> M6 (S1)
+TODO - submachine call M6 -> M5! Push(6, 1)
+TODO - submachine call M5 -> M0! Push(5, 1)
+TODO - consome token 'resultado'!
+
+Recebendo token: '=' (Simbolo)
+TODO - retorno! M0 -> M5 (S1)
+TODO - consome token '='!
+
+Recebendo token: 'resultado' (Identificador)
+TODO - submachine call M5 -> M10! Push(5, 7)
+TODO - submachine call M10 -> M9! Push(10, 1)
+TODO - consome token 'resultado'!
+
+Recebendo token: '*' (Simbolo)
+TODO - retorno! M9 -> M10 (S1)
+TODO - submachine call M10 -> M7! Push(10, 0)
+TODO - consome token '*'!
+
+Recebendo token: 'numero' (Identificador)
+TODO - retorno! M7 -> M10 (S0)
+TODO - submachine call M10 -> M9! Push(10, 1)
+TODO - consome token 'numero'!
+
+Recebendo token: ';' (Simbolo)
+TODO - retorno! M9 -> M10 (S1)
+TODO - retorno! M10 -> M5 (S7)
+TODO - consome token ';'!
+
+Recebendo token: '}' (Simbolo)
+TODO - retorno! M5 -> M6 (S1)
+TODO - retorno! M6 -> M5 (S16)
+TODO - consome token '}'!
+
+Recebendo token: ';' (Simbolo)
+TODO - consome token ';'!
+
+Recebendo token: 'return' (Identificador)
+TODO - retorno! M5 -> M6 (S1)
+TODO - submachine call M6 -> M5! Push(6, 1)
+TODO - consome token 'return'!
+
+Recebendo token: 'resultado' (Identificador)
+TODO - submachine call M5 -> M10! Push(5, 7)
+TODO - submachine call M10 -> M9! Push(10, 1)
+TODO - consome token 'resultado'!
+
+Recebendo token: ';' (Simbolo)
+TODO - retorno! M9 -> M10 (S1)
+TODO - retorno! M10 -> M5 (S7)
+TODO - consome token ';'!
+
+Recebendo token: '}' (Simbolo)
+TODO - retorno! M5 -> M6 (S1)
+TODO - retorno! M6 -> M5 (S16)
+TODO - consome token '}'!
+
+Recebendo token: ';' (Simbolo)
+TODO - consome token ';'!
+
+Recebendo token: 'int' (Identificador)
+TODO - retorno! M5 -> M6 (S1)
+TODO - submachine call M6 -> M5! Push(6, 1)
+TODO - submachine call M5 -> M4! Push(5, 5)
+TODO - consome token 'int'!
+
+Recebendo token: 'entradaNum' (Identificador)
+TODO - retorno! M4 -> M5 (S5)
+TODO - consome token 'entradaNum'!
+
+Recebendo token: ';' (Simbolo)
+TODO - consome token ';'!
+
+Recebendo token: 'scan' (Identificador)
+TODO - retorno! M5 -> M6 (S1)
+TODO - submachine call M6 -> M5! Push(6, 1)
+TODO - consome token 'scan'!
+
+Recebendo token: '(' (Simbolo)
+TODO - consome token '('!
+
+Recebendo token: 'entradaNum' (Identificador)
+TODO - submachine call M5 -> M1! Push(5, 18)
+TODO - submachine call M1 -> M0! Push(1, 1)
+TODO - consome token 'entradaNum'!
+
+Recebendo token: ')' (Simbolo)
+TODO - retorno! M0 -> M1 (S1)
+TODO - retorno! M1 -> M5 (S18)
+TODO - consome token ')'!
+
+Recebendo token: ';' (Simbolo)
+TODO - consome token ';'!
+
+Recebendo token: 'int' (Identificador)
+TODO - retorno! M5 -> M6 (S1)
+TODO - submachine call M6 -> M5! Push(6, 1)
+TODO - submachine call M5 -> M4! Push(5, 5)
+TODO - consome token 'int'!
+
+Recebendo token: 'resultado' (Identificador)
+TODO - retorno! M4 -> M5 (S5)
+TODO - consome token 'resultado'!
+
+Recebendo token: ';' (Simbolo)
+TODO - consome token ';'!
+
+Recebendo token: 'resultado' (Identificador)
+TODO - retorno! M5 -> M6 (S1)
+TODO - submachine call M6 -> M5! Push(6, 1)
+TODO - submachine call M5 -> M0! Push(5, 1)
+TODO - consome token 'resultado'!
+
+Recebendo token: '=' (Simbolo)
+TODO - retorno! M0 -> M5 (S1)
+TODO - consome token '='!
+
+Recebendo token: 'calculaFatorial' (Identificador)
+TODO - submachine call M5 -> M10! Push(5, 7)
+TODO - submachine call M10 -> M9! Push(10, 1)
+TODO - consome token 'calculaFatorial'!
+
+Recebendo token: '(' (Simbolo)
+TODO - consome token '('!
+
+Recebendo token: 'entradaNum' (Identificador)
+TODO - submachine call M9 -> M1! Push(9, 5)
+TODO - submachine call M1 -> M0! Push(1, 1)
+TODO - consome token 'entradaNum'!
+
+Recebendo token: ')' (Simbolo)
+TODO - retorno! M0 -> M1 (S1)
+TODO - retorno! M1 -> M9 (S5)
+TODO - consome token ')'!
+
+Recebendo token: ';' (Simbolo)
+TODO - retorno! M9 -> M10 (S1)
+TODO - retorno! M10 -> M5 (S7)
+TODO - consome token ';'!
+
+Recebendo token: '' (EOF)
